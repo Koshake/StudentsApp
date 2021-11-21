@@ -1,4 +1,4 @@
-package com.koshake1.studentsapp.ui.dashboard
+package com.koshake1.studentsapp.ui.classes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,16 +8,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.koshake1.studentsapp.R
-import com.koshake1.studentsapp.databinding.FragmentDashboardBinding
+import com.koshake1.studentsapp.databinding.FragmentClassesBinding
 
-class DashboardFragment : Fragment() {
+class ClassesFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
-    private var _binding: FragmentDashboardBinding? = null
+    private lateinit var classesViewModel: ClassesViewModel
+    private var _binding: FragmentClassesBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,14 +22,14 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        classesViewModel =
+            ViewModelProvider(this).get(ClassesViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentClassesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        classesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

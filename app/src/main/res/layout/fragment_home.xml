@@ -4,19 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/gray"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_hello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
+        style="@style/HeaderTextView"
+        android:layout_marginStart="@dimen/text_left_margin"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/Hello"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/timer_card"
+        app:layout_constraintHeight_percent="0.25"
+        style="@style/CardViewStyle"
+        android:layout_margin="@dimen/layout_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_hello" />
+
+    <TextView
+        android:id="@+id/textview_classes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryHeaderTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_card"
+        android:layout_marginStart="@dimen/text_left_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:text="@string/title_classes"/>
+
+    <TextView
+        android:id="@+id/textview_lessons_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryHeaderTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_card"
+        android:layout_marginEnd="@dimen/text_left_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:text="@string/Classes_today"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classes_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/item_left_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_classes"
+        tools:listitem="@layout/item_classes" />
+
+    <TextView
+        android:id="@+id/textview_homework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SecondaryHeaderTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classes_recyclerview"
+        android:layout_marginStart="@dimen/text_left_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:text="@string/homework"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homework_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        android:layout_marginTop="@dimen/text_top_margin"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/item_left_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_homework"
+        tools:listitem="@layout/item_homework" />
 </androidx.constraintlayout.widget.ConstraintLayout>

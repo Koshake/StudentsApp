@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">StudentsApp</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_classes">Classes</string>
+    <string name="Hello">Hello!</string>
+    <string name="Classes_today">%1d classes today</string>
+    <string name="time">8:30-9:30</string>
+    <string name="history">History</string>
+    <string name="days_left">%1d days left</string>
+    <string name="description">Description</string>
+    <string name="homework">Homework</string>
 </resources>

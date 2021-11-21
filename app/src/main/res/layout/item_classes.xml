@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/home_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/text_left_margin"
+    app:cardCornerRadius="@dimen/corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/class_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/squircleImageView"
+            app:srcCompat="@mipmap/ic_book_foreground"
+            tool:layout_editor_absoluteX="0dp"
+            tool:layout_editor_absoluteY="0dp" />
+
+
+        <TextView
+            android:id="@+id/class_name_text"
+            style="@style/SecondaryHeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_left_margin"
+            android:layout_marginTop="@dimen/text_top_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/class_image"
+            tool:text="@string/history" />
+
+        <TextView
+            android:id="@+id/time_text"
+            style="@style/OrdinaryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_left_margin"
+            android:layout_marginTop="@dimen/text_top_margin"
+            app:layout_constraintTop_toBottomOf="@id/class_name_text"
+            app:layout_constraintStart_toEndOf="@id/class_image"
+            tool:text="@string/time" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/skype_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:srcCompat="@mipmap/ic_camera" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

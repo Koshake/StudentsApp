@@ -1,10 +1,10 @@
-package com.koshake1.studentsapp.ui.dashboard
+package com.koshake1.studentsapp.ui.classes
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ClassesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
