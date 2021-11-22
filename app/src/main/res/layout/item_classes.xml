@@ -19,6 +19,8 @@
             android:id="@+id/class_image"
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_height"
+            android:layout_marginStart="@dimen/text_left_margin"
+            android:layout_marginTop="@dimen/small"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:src="@mipmap/ic_book" />

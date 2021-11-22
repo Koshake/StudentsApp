@@ -50,8 +50,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/homework_iv"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:layout_marginTop="@dimen/medium"
             android:layout_marginBottom="@dimen/medium"
             app:civ_border_width="1dp"

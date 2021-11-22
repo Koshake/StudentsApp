@@ -8,6 +8,7 @@
     <dimen name="text_small_top_margin">10dp</dimen>
     <dimen name="layout_margin">10dp</dimen>
     <dimen name="medium">16dp</dimen>
+    <dimen name="small">4dp</dimen>
 
     <dimen name="image_margin_start">40dp</dimen>
 
