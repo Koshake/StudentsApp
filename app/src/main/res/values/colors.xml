@@ -17,4 +17,8 @@
     <color name="secondary_dark">#CABF45</color>
     <color name="dark_red">#A30000</color>
 
+    <color name="colorPrimaryBlack">#5C5C5C</color>
+    <color name="colorPrimaryDarkBlack">#212121</color>
+    <color name="colorSecondaryBlack">#6E6D6D</color>
+
 </resources>

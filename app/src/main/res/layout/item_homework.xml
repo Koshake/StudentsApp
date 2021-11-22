@@ -6,7 +6,8 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_marginStart="@dimen/text_left_margin"
-    app:cardCornerRadius="@dimen/corner_radius">
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardBackgroundColor="@color/colorSecondaryBlack">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -47,19 +48,21 @@
             app:layout_constraintStart_toStartOf="parent"
             tool:text="@string/description" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/homework_image"
-            style="@style/squircleImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/homework_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/medium"
+            android:layout_marginBottom="@dimen/medium"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#FF000000"
             app:layout_constraintBottom_toTopOf="@id/description_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="@dimen/image_margin_start"
             app:layout_constraintStart_toEndOf="@id/description_text"
             android:layout_marginEnd="@dimen/text_left_margin"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/homework" />
+            tool:src="@drawable/homework"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

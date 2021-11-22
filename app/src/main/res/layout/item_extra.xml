@@ -8,7 +8,7 @@
     android:layout_marginStart="@dimen/text_left_margin"
     android:layout_marginTop="@dimen/text_top_margin"
     app:cardCornerRadius="@dimen/corner_radius"
-    app:cardBackgroundColor="@color/colorSecondaryBlack">
+    app:cardBackgroundColor="@color/primary">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
@@ -19,13 +19,14 @@
             android:id="@+id/class_image"
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_height"
+            android:layout_marginStart="@dimen/text_left_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:src="@mipmap/ic_book" />
 
         <TextView
             android:id="@+id/class_name_text"
-            style="@style/SecondaryHeaderTextView"
+            style="@style/HeaderTextViewWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_left_margin"
@@ -35,7 +36,7 @@
             tool:text="@string/history" />
 
         <TextView
-            android:id="@+id/time_text"
+            android:id="@+id/teacher_textview"
             style="@style/OrdinaryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,24 +46,42 @@
             app:layout_constraintStart_toEndOf="@id/class_image"
             tool:text="@string/time" />
 
-        <View
-            android:id="@+id/ib_send"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:background="@color/primary_dark"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/layout"
-            app:layout_constraintTop_toTopOf="@+id/layout"/>
-
-        <ImageView
+        <TextView
+            android:id="@+id/additional_textview"
+            style="@style/OrdinaryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/text_left_margin"
+            android:layout_marginTop="@dimen/text_top_margin"
+            app:layout_constraintTop_toBottomOf="@id/teacher_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            tool:text="@string/time" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image1"
+            android:layout_width="@dimen/image_small_width"
+            android:layout_height="@dimen/image_small_height"
+            android:src="@mipmap/ic_book"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+            android:layout_marginTop="@dimen/text_top_margin"
+            android:layout_marginStart="@dimen/margin_40"
+            android:layout_marginBottom="@dimen/text_top_margin"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/ib_send"
-            android:src="@mipmap/ic_camera_foreground"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/additional_textview" />
 
-
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image2"
+            android:layout_width="@dimen/image_small_width"
+            android:layout_height="@dimen/image_small_height"
+            android:src="@mipmap/ic_book"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+            android:layout_marginTop="@dimen/text_top_margin"
+            android:layout_marginBottom="@dimen/text_top_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image1"
+            app:layout_constraintTop_toBottomOf="@+id/additional_textview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

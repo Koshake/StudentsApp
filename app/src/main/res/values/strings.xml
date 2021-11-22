@@ -10,4 +10,14 @@
     <string name="description">Description</string>
     <string name="homework">Homework</string>
     <string name="today">Today %1</string>
+
+    <string name="timer_msg">Are you ready for exams?</string>
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+
+    <string name="_09">09</string>
+    <string name="divider">:</string>
+    <string name="_23">23</string>
+    <string name="_59">59</string>
 </resources>

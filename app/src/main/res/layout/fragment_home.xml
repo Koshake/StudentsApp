@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/gray"
+    android:background="@color/colorPrimaryBlack"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/text_hello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/HeaderTextView"
+        style="@style/HeaderTextViewWhite"
         android:layout_marginStart="@dimen/text_left_margin"
         android:textSize="20sp"
         android:text="@string/Hello"
@@ -28,7 +28,116 @@
         android:layout_margin="@dimen/layout_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_hello" />
+        app:layout_constraintTop_toBottomOf="@id/text_hello">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timer_msg"
+            android:textAlignment="center"
+            style="@style/HeaderTextViewWhite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_days_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/days"
+            style="@style/TextViewWhite"
+            app:layout_constraintTop_toBottomOf="@id/days"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/days"
+            app:layout_constraintEnd_toEndOf="@id/days" />
+
+        <TextView
+            android:id="@+id/tv_hour_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours"
+            style="@style/TextViewWhite"
+            app:layout_constraintTop_toBottomOf="@id/hours"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/hours"
+            app:layout_constraintEnd_toEndOf="@id/hours"/>
+
+        <TextView
+            android:id="@+id/tv_hour_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes"
+            style="@style/TextViewWhite"
+            app:layout_constraintTop_toBottomOf="@id/minutes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/minutes"
+            app:layout_constraintEnd_toEndOf="@id/minutes"/>
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_09"
+            style="@style/LargeTextViewWhite"
+            android:layout_marginStart="@dimen/medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dots1"/>
+
+        <TextView
+            android:id="@+id/dots1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divider"
+            style="@style/LargeTextViewWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/days"
+            app:layout_constraintEnd_toStartOf="@+id/hours"
+            app:layout_constraintStart_toEndOf="@+id/days"
+            app:layout_constraintTop_toTopOf="@+id/days" />
+
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_23"
+            style="@style/LargeTextViewWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/dots1"
+            app:layout_constraintStart_toEndOf="@+id/dots1"
+            app:layout_constraintEnd_toStartOf="@+id/dots2"
+            app:layout_constraintTop_toTopOf="@+id/dots1" />
+
+        <TextView
+            android:id="@+id/dots2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divider"
+            style="@style/LargeTextViewWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/hours"
+            app:layout_constraintStart_toEndOf="@+id/hours"
+            app:layout_constraintEnd_toStartOf="@+id/minutes"
+            app:layout_constraintTop_toTopOf="@+id/hours" />
+
+        <TextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_59"
+            style="@style/LargeTextViewWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/dots2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dots2"
+            app:layout_constraintTop_toTopOf="@+id/dots2"
+            android:layout_marginEnd="@dimen/medium" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
     <TextView
         android:id="@+id/textview_classes"
@@ -81,10 +190,10 @@
         android:id="@+id/homework_recyclerview"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.25"
         android:layout_marginTop="@dimen/text_top_margin"
         android:orientation="horizontal"
-        android:paddingStart="@dimen/item_left_padding"
+        android:layout_marginStart="@dimen/item_left_padding"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
