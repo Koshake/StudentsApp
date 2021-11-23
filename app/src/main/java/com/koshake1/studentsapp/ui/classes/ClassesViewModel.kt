@@ -1,13 +1,8 @@
 package com.koshake1.studentsapp.ui.classes
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.koshake1.studentsapp.model.repository.InfoRepository
 
-class ClassesViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
+class ClassesViewModel(private val repository: InfoRepository) : ViewModel() {
+        fun getClasses() = repository.getClasses()
 }

@@ -1,13 +1,9 @@
 package com.koshake1.studentsapp.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.koshake1.studentsapp.model.repository.InfoRepository
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel(private val repository: InfoRepository) : ViewModel() {
 
-    //private val _text = MutableLiveData<String>().apply {
-    //    value = "This is home Fragment"
-    //}
-    //val text: LiveData<String> = _text
+    fun getClassesInfo() = repository.getClassesInfo()
 }
