@@ -23,7 +23,7 @@
             android:layout_marginTop="@dimen/small"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tool:src="@mipmap/ic_book" />
+            android:src="@drawable/book2" />
 
         <TextView
             android:id="@+id/class_name_text"

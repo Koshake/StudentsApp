@@ -23,7 +23,7 @@
             android:layout_marginTop="@dimen/text_top_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tool:src="@mipmap/ic_book" />
+            android:src="@drawable/book1" />
 
         <TextView
             android:id="@+id/class_name_text"
@@ -62,7 +62,7 @@
             android:id="@+id/image1"
             android:layout_width="@dimen/image_small_width"
             android:layout_height="@dimen/image_small_height"
-            android:src="@mipmap/ic_book"
+            android:src="@drawable/image_1"
             app:civ_border_color="#FF000000"
             app:civ_border_width="1dp"
             android:layout_marginTop="@dimen/text_top_margin"
@@ -76,7 +76,7 @@
             android:id="@+id/image2"
             android:layout_width="@dimen/image_small_width"
             android:layout_height="@dimen/image_small_height"
-            android:src="@mipmap/ic_book"
+            android:src="@drawable/image3"
             app:civ_border_color="#FF000000"
             app:civ_border_width="1dp"
             android:layout_marginTop="@dimen/text_top_margin"

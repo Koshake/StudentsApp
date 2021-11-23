@@ -62,7 +62,7 @@
             android:layout_marginStart="@dimen/image_margin_start"
             app:layout_constraintStart_toEndOf="@id/description_text"
             android:layout_marginEnd="@dimen/text_left_margin"
-            tool:src="@drawable/homework"/>
+            android:src="@drawable/book2"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
