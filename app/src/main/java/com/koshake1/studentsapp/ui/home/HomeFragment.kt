@@ -4,40 +4,54 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import com.bartex.classjobless4.ui.adapters.HomeworkAdapter
 import com.koshake1.studentsapp.R
 import com.koshake1.studentsapp.databinding.FragmentHomeBinding
+import com.koshake1.studentsapp.model.data.Homework
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private val homeViewModel: HomeViewModel by viewModel()
     private var _binding: FragmentHomeBinding? = null
 
     private val binding get() = _binding!!
+
+    private var homeworkAdapter : HomeworkAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        //val textView: TextView = binding.textHello
-        //homeViewModel.text.observe(viewLifecycleOwner, Observer {
-       //     textView.text = it
-        //})
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val homeworkList = homeViewModel.getClassesInfo().homeworks
+        initHomeworkAdapter(homeworkList)
+
+        binding.textviewLessonsCount.text =
+            context?.resources?.getString(R.string.Classes_today, homeworkList.size)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun initClassesAdapter() {
+
+    }
+
+    private fun initHomeworkAdapter(list : List<Homework>) {
+        if (homeworkAdapter == null) {
+            homeworkAdapter = HomeworkAdapter(list)
+            binding.homeworkRecyclerview.adapter = homeworkAdapter
+        }
     }
 }

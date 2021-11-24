@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.koshake1.studentsapp.databinding.FragmentClassesBinding
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class ClassesFragment : Fragment() {
 
-    private lateinit var classesViewModel: ClassesViewModel
+    private val classesViewModel: ClassesViewModel by viewModel()
     private var _binding: FragmentClassesBinding? = null
 
     private val binding get() = _binding!!
@@ -22,17 +20,8 @@ class ClassesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        classesViewModel =
-            ViewModelProvider(this).get(ClassesViewModel::class.java)
-
         _binding = FragmentClassesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        classesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
