@@ -1,12 +1,9 @@
-package com.bartex.classjobless4.ui.adapters
+package com.koshake1.studentsapp.ui.adapters
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.koshake1.studentsapp.R
 import com.koshake1.studentsapp.databinding.ItemHomeworkBinding

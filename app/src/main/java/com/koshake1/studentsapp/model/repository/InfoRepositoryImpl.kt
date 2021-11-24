@@ -28,6 +28,7 @@ class InfoRepositoryImpl : InfoRepository {
             ),
             Classes(
                 name = "Sports", time = "12:00-12:45",
+                description = "Win word championship!",
                 online = false, extra = true
             )
         )
@@ -37,7 +38,7 @@ class InfoRepositoryImpl : InfoRepository {
         return listOf(
             Homework(
                 name = "Physics", daysLeft = 1,
-                description = "Read article about Isaac Nweton", icon = R.drawable.book2
+                description = "Read article about Isaac Newton", icon = R.drawable.book2
             ),
             Homework(
                 name = "History", daysLeft = 2,
