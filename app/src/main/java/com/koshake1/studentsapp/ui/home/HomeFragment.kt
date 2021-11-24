@@ -54,14 +54,14 @@ class HomeFragment : Fragment() {
     private fun initHomeworkAdapter(list : List<Homework>) {
         if (homeworkAdapter == null) {
             homeworkAdapter = HomeworkAdapter(list)
-            binding.homeworkRecyclerview.adapter = homeworkAdapter
         }
+        binding.homeworkRecyclerview.adapter = homeworkAdapter
     }
 
     private fun initClassesAdapter(list : List<Classes>) {
         if (classesAdapter == null) {
             classesAdapter = ClassesAdapter(list, FragmentType.HOME)
-            binding.classesRecyclerview.adapter = classesAdapter
         }
+        binding.classesRecyclerview.adapter = classesAdapter
     }
 }

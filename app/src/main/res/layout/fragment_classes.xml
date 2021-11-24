@@ -34,7 +34,7 @@
         android:id="@+id/classes_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/text_top_margin"
+        android:layout_marginBottom="@dimen/margin60"
         android:orientation="vertical"
         android:layout_marginEnd="@dimen/margin30"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

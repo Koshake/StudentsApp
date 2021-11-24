@@ -46,7 +46,7 @@ class ClassesFragment : Fragment() {
     private fun initAdapter(list : List<Classes>) {
         if (classesAdapter == null) {
             classesAdapter = ClassesAdapter(list, FragmentType.CLASSES)
-            binding.classesRecyclerview.adapter = classesAdapter
         }
+        binding.classesRecyclerview.adapter = classesAdapter
     }
 }

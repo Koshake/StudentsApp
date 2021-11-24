@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_left_margin"
-            android:layout_marginTop="@dimen/text_top_margin"
+            android:layout_marginTop="@dimen/text_small_top_margin"
             app:layout_constraintStart_toEndOf="@id/class_image"
             app:layout_constraintTop_toTopOf="parent"
             tool:text="@string/history" />
@@ -51,7 +51,7 @@
             android:id="@+id/shevron_view"
             android:layout_width="60dp"
             android:layout_height="0dp"
-            android:background="@color/primary_dark"
+            android:background="@color/primary_light"
             app:layout_constraintBottom_toBottomOf="@+id/layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/layout" />
