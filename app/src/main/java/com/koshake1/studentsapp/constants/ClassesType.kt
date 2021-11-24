@@ -9,3 +9,5 @@ enum class FragmentType {
     HOME,
     CLASSES
 }
+
+const val URL = "https://www.skype.com/ru/"

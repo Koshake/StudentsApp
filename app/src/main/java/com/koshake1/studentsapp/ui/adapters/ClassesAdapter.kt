@@ -14,7 +14,8 @@ import com.koshake1.studentsapp.model.data.Classes
 
 class ClassesAdapter(
     private val classesList: List<Classes>,
-    private val fragmentType: FragmentType
+    private val fragmentType: FragmentType,
+    private val clickListener: OnVideoItemClickListener
 ) : RecyclerView.Adapter<BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
@@ -57,6 +58,12 @@ class ClassesAdapter(
                 if (lesson.online) {
                     shevronImage.visibility = View.VISIBLE
                     shevronView.visibility = View.VISIBLE
+                    shevronView.setOnClickListener {
+                        clickListener.onItemClicked()
+                    }
+                    shevronView.setOnClickListener {
+                        clickListener.onItemClicked()
+                    }
                 } else {
                     shevronImage.visibility = View.INVISIBLE
                     shevronView.visibility = View.INVISIBLE
