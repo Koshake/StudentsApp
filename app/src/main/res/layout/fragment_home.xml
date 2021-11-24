@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         style="@style/HeaderTextViewWhite"
         android:layout_marginStart="@dimen/text_left_margin"
+        android:layout_marginTop="@dimen/text_top_margin"
         android:textSize="20sp"
         android:text="@string/Hello"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +139,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
     <TextView
         android:id="@+id/textview_classes"
         android:layout_width="wrap_content"
@@ -166,7 +166,6 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintHeight_percent="0.15"
-        android:layout_marginTop="@dimen/text_top_margin"
         android:orientation="horizontal"
         android:paddingStart="@dimen/item_left_padding"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

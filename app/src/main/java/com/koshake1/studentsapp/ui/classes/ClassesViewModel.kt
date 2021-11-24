@@ -5,4 +5,5 @@ import com.koshake1.studentsapp.model.repository.InfoRepository
 
 class ClassesViewModel(private val repository: InfoRepository) : ViewModel() {
         fun getClasses() = repository.getClasses()
+        fun getDate() = repository.getDate()
 }

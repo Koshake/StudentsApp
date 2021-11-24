@@ -10,6 +10,10 @@
     <dimen name="medium">16dp</dimen>
     <dimen name="small">4dp</dimen>
 
+    <dimen name="margin24">24dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+
     <dimen name="image_margin_start">40dp</dimen>
 
     <dimen name="corner_radius">10dp</dimen>

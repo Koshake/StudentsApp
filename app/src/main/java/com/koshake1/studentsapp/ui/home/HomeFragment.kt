@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.koshake1.studentsapp.R
+import com.koshake1.studentsapp.constants.FragmentType
 import com.koshake1.studentsapp.databinding.FragmentHomeBinding
 import com.koshake1.studentsapp.model.data.Classes
 import com.koshake1.studentsapp.model.data.Homework
@@ -59,7 +60,7 @@ class HomeFragment : Fragment() {
 
     private fun initClassesAdapter(list : List<Classes>) {
         if (classesAdapter == null) {
-            classesAdapter = ClassesAdapter(list)
+            classesAdapter = ClassesAdapter(list, FragmentType.HOME)
             binding.classesRecyclerview.adapter = classesAdapter
         }
     }

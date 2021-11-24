@@ -11,4 +11,6 @@ interface InfoRepository {
     fun getClasses() : List<Classes>
 
     fun getHomeworks() : List<Homework>
+
+    fun getDate() : String
 }

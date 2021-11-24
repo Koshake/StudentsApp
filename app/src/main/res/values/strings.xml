@@ -9,7 +9,7 @@
     <string name="days_left">%1d days left</string>
     <string name="description">Description</string>
     <string name="homework">Homework</string>
-    <string name="today">Today %1</string>
+    <string name="today">Today %s</string>
 
     <string name="timer_msg">Are you ready for exams?</string>
     <string name="days">Days</string>

@@ -4,3 +4,8 @@ enum class ClassesType {
     BASE,
     EXTRA
 }
+
+enum class FragmentType {
+    HOME,
+    CLASSES
+}

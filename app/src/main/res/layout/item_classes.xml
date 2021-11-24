@@ -7,8 +7,8 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/text_left_margin"
     android:layout_marginTop="@dimen/text_top_margin"
-    app:cardCornerRadius="@dimen/corner_radius"
-    app:cardBackgroundColor="@color/colorSecondaryBlack">
+    app:cardBackgroundColor="@color/colorSecondaryBlack"
+    app:cardCornerRadius="@dimen/corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
@@ -21,9 +21,9 @@
             android:layout_height="@dimen/image_medium_height"
             android:layout_marginStart="@dimen/text_left_margin"
             android:layout_marginTop="@dimen/small"
+            android:src="@drawable/book2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/book2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/class_name_text"
@@ -32,8 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_left_margin"
             android:layout_marginTop="@dimen/text_top_margin"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/class_image"
+            app:layout_constraintTop_toTopOf="parent"
             tool:text="@string/history" />
 
         <TextView
@@ -43,29 +43,28 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_left_margin"
             android:layout_marginTop="@dimen/text_small_top_margin"
-            app:layout_constraintTop_toBottomOf="@id/class_name_text"
             app:layout_constraintStart_toEndOf="@id/class_image"
+            app:layout_constraintTop_toBottomOf="@id/class_name_text"
             tool:text="@string/time" />
 
         <View
-            android:id="@+id/ib_send"
+            android:id="@+id/shevron_view"
             android:layout_width="60dp"
             android:layout_height="0dp"
             android:background="@color/primary_dark"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/layout"
-            app:layout_constraintTop_toTopOf="@+id/layout"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout" />
 
         <ImageView
             android:id="@+id/shevron_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/ic_camera_foreground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/ib_send"
-            android:src="@mipmap/ic_camera_foreground"/>
-
+            app:layout_constraintStart_toStartOf="@id/shevron_view"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

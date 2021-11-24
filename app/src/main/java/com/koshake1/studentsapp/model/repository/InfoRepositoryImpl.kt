@@ -74,6 +74,14 @@ class InfoRepositoryImpl : InfoRepository {
         val month = calendar.get(Calendar.MONTH)
         val year = calendar.get(Calendar.YEAR)
         val date = String.format(Locale.getDefault(),"%02d.%02d.%04d",day, month + 1, year)
-        return Info (date, "20.12.2021", getClasses(), getHomeworks())
+        return Info (getDate(), "20.12.2021", getClasses(), getHomeworks())
+    }
+
+    override fun getDate() : String {
+        val calendar = GregorianCalendar()
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+        val month = calendar.get(Calendar.MONTH)
+        val year = calendar.get(Calendar.YEAR)
+        return String.format(Locale.getDefault(),"%02d.%02d.%04d",day, month + 1, year)
     }
 }
